@@ -5,21 +5,21 @@
 class Ccgate < Formula
   desc "LLM-powered PermissionRequest hook for coding agents (e.g. Claude Code)"
   homepage "https://github.com/tak848/ccgate"
-  version "0.10.0"
+  version "0.10.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tak848/ccgate/releases/download/v0.10.0/ccgate-darwin-amd64.tar.gz"
-      sha256 "b6fb854db251829c7346c86b5e0ead29ebd60d8b917653f7971457d26a51262e"
+      url "https://github.com/tak848/ccgate/releases/download/v0.10.1/ccgate-darwin-amd64.tar.gz"
+      sha256 "215b3a6f445f9a42433e3eba19a364287d3672054c56d2f1bd524e79efc8d63c"
 
       define_method(:install) do
         bin.install "ccgate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tak848/ccgate/releases/download/v0.10.0/ccgate-darwin-arm64.tar.gz"
-      sha256 "e5d20cd382a1e5318b71e7e49d3d50165b72cf71a5d8b295051addfc39f50601"
+      url "https://github.com/tak848/ccgate/releases/download/v0.10.1/ccgate-darwin-arm64.tar.gz"
+      sha256 "126e0a360d9b4bb053a42dfc9532d1e6165e8e7f39ea6b8c6828f28dbeff7496"
 
       define_method(:install) do
         bin.install "ccgate"
@@ -29,15 +29,15 @@ class Ccgate < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tak848/ccgate/releases/download/v0.10.0/ccgate-linux-amd64.tar.gz"
-      sha256 "15f8871f8ec01cdffcf68a0301d9a2f3d733ff86d41a8bdd2038a407776a2081"
+      url "https://github.com/tak848/ccgate/releases/download/v0.10.1/ccgate-linux-amd64.tar.gz"
+      sha256 "1fc1eb51186b8d437a4ecd2f5695bf6c1cfa877fba833360fab06d8e424b70bd"
       define_method(:install) do
         bin.install "ccgate"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tak848/ccgate/releases/download/v0.10.0/ccgate-linux-arm64.tar.gz"
-      sha256 "377c9766ab8a0ad472cf1b341e565b09292e394d422d6bb7c4e24d8c68eae585"
+      url "https://github.com/tak848/ccgate/releases/download/v0.10.1/ccgate-linux-arm64.tar.gz"
+      sha256 "5952a05b84f06ed8d9182b3ef9739fdce5748d04deaa2c2e63f42b565fb2991a"
       define_method(:install) do
         bin.install "ccgate"
       end
